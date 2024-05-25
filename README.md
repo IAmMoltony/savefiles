@@ -2,23 +2,26 @@
 
 This is my repository for backing up game save files.
 
-## Usage
-
-### Initial installation
+## Initial installation
 
 Copy `user_EXAMPLE.json` as `user.json` in the repository directory. Then fill in
 your game paths (see below) and your machine name (used for separating different
 machines' save file backups).
 
-### Actual usage
+## Usage
 
-There are two back-up modes: *all-game* and *single-game* backups.
+The backup tool can be used as a CLI and as a GUI.
 
-An all-game backup backs up every single game. To perform one, simply do
-`./backup.py backup`.
+### CLI
 
-A single-game backup backs up just one game that you want to back up. To perform
-one, do `./backup.py backup -g (game name here)`
+To use the CLI, run the `backup.py` script in your terminal. To back up all
+your games, run `./backup.py backup`, and to back up a specific game, run
+`./backup.py backup -g (game name here`.
+
+### GUI
+
+To start the GUI, run `./backup.py gui` and then it will show up. Using the
+GUI is very straightforward from there.
 
 ## Supported games
 
