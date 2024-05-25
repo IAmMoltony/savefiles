@@ -8,5 +8,5 @@ BACKUPPERS = {
     "Touhou06": Touhou06Backupper,
     "Touhou07": Touhou07Backupper,
     "BabaIsYou": BabaIsYouBackupper,
-    "SuperTux": SuperTuxBackupper
+    "SuperTux": SuperTuxBackupper,
 }

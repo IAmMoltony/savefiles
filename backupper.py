@@ -2,8 +2,10 @@ import os
 import shutil
 import glob
 
+
 class BackupperError(Exception):
     pass
+
 
 class Backupper:
     def __init__(self, paths: dict[str], machine_name: str, game_name: str):

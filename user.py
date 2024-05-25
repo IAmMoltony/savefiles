@@ -1,6 +1,7 @@
 import json
 import os
 
+
 class User:
     def __init__(self):
         self.machine_name = ""

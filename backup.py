@@ -8,15 +8,27 @@ from backuppers import BACKUPPERS
 
 __version__ = "1.0.1"
 
+
 def set_wd():
     script_path = os.path.abspath(__file__)
     script_dir = os.path.dirname(script_path)
     os.chdir(script_dir)
 
+
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("action", type=str, choices=["version", "backup", "printuser"], help="what to do")
-    parser.add_argument("--game", "-g", type=str, help="when 'backup' action, only backup the specified game")
+    parser.add_argument(
+        "action",
+        type=str,
+        choices=["version", "backup", "printuser"],
+        help="what to do",
+    )
+    parser.add_argument(
+        "--game",
+        "-g",
+        type=str,
+        help="when 'backup' action, only backup the specified game",
+    )
     args = parser.parse_args()
 
     set_wd()
@@ -53,7 +65,9 @@ def main():
                     game_backupper = obj
                     break
             if game_backupper is None:
-                print("[Backup] Could not find backupper for game or game not registered in user.json")
+                print(
+                    "[Backup] Could not find backupper for game or game not registered in user.json"
+                )
                 sys.exit(1)
             else:
                 game_backupper.backup()
@@ -65,6 +79,7 @@ def main():
         print("[Backup] All-game backup done")
     else:
         print("ok wtf")
+
 
 if __name__ == "__main__":
     main()
