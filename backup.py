@@ -3,10 +3,11 @@
 import argparse
 import os
 import sys
+import gui
 from user import User
 from backuppers import BACKUPPERS
 
-__version__ = "1.0.1"
+__version__ = "1.1"
 
 
 def set_wd():
@@ -15,36 +16,21 @@ def set_wd():
     os.chdir(script_dir)
 
 
-def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument(
-        "action",
-        type=str,
-        choices=["version", "backup", "printuser"],
-        help="what to do",
-    )
-    parser.add_argument(
-        "--game",
-        "-g",
-        type=str,
-        help="when 'backup' action, only backup the specified game",
-    )
-    args = parser.parse_args()
-
-    set_wd()
-
+def main(action: str, game_name: str = None):
     if not os.path.exists("./user.json"):
         print("user.json not found, please create")
-        sys.exit(1)
+        return False
 
     user = User()
     user.load()
 
-    if args.action == "version":
+    if action == "version":
         print(f"Backup.py version {__version__}")
-    elif args.action == "printuser":
+        return True
+    elif action == "printuser":
         print(user)
-    elif args.action == "backup":
+        return True
+    elif action == "backup":
         print("[Backup] Back up started")
         print(user)
 
@@ -58,28 +44,52 @@ def main():
         for cls in backupper_classes:
             backupper_objects.append(cls(user.paths, user.machine_name))
 
-        if args.game is not None:
+        if game_name is not None:
             game_backupper = None
             for obj in backupper_objects:
-                if obj.game_name == args.game:
+                if obj.game_name == game_name:
                     game_backupper = obj
                     break
             if game_backupper is None:
                 print(
-                    "[Backup] Could not find backupper for game or game not registered in user.json"
+                    f"[Backup] Could not find backupper for game '{game_name}' or game not registered in user.json"
                 )
-                sys.exit(1)
+                return False
             else:
                 game_backupper.backup()
                 print("[Backup] Single-game backup done")
-                sys.exit(0)
+                return True
 
         for obj in backupper_objects:
             obj.backup()
         print("[Backup] All-game backup done")
-    else:
-        print("ok wtf")
+        return True
+    elif action == "gui":
+        gui.start_gui()
+        return True
+    return True
+
+
+def entry():
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "action",
+        type=str,
+        choices=["version", "backup", "printuser", "gui"],
+        help="what to do",
+    )
+    parser.add_argument(
+        "--game",
+        "-g",
+        type=str,
+        help="when 'backup' action, only backup the specified game",
+    )
+    args = parser.parse_args()
+
+    set_wd()
+
+    main(args.action, args.game)
 
 
 if __name__ == "__main__":
-    main()
+    entry()
