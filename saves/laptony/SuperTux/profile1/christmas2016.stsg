@@ -1,0 +1,58 @@
+(supertux-savegame
+  (version 1)
+  (title "Christmas 2016 (1/5)")
+  (tux
+    (bonus "none")
+    (fireflowers 0)
+    (iceflowers 0)
+    (airflowers 0)
+    (earthflowers 0)
+    (coins 144)
+    (worldmap-sprite "images/worldmap/common/tux.sprite")
+    (last-worldmap "")
+  )
+  (state
+    ("worlds"
+      ("/levels/christmas2016/worldmap.stwm"
+        ("levels"
+          ("christmas1.stl"
+            (perfect #f)
+            (solved #f)
+          )
+          ("christmas3.stl"
+            (perfect #f)
+            (solved #f)
+          )
+          ("christmas2.stl"
+            (perfect #f)
+            (solved #f)
+          )
+          ("outro.stl"
+            (perfect #f)
+            (solved #f)
+          )
+          ("intro.stl"
+            (perfect #t)
+            ("statistics"
+              (coins-collected 0)
+              (secrets-found 0)
+              (time-needed 0.045)
+              (secrets-found-total 0)
+              (badguys-killed-total 0)
+              (coins-collected-total 0)
+              (badguys-killed 0)
+            )
+            (solved #t)
+          )
+        )
+        ("tux"
+          (y 11)
+          (x 14)
+          (back "north")
+        )
+        ("tilemaps"
+        )
+      )
+    )
+  )
+)

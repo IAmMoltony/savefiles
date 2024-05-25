@@ -1,0 +1,162 @@
+(supertux-savegame
+  (version 1)
+  (title "Призовой остров I (3/22)")
+  (tux
+    (bonus "none")
+    (fireflowers 0)
+    (iceflowers 0)
+    (airflowers 0)
+    (earthflowers 0)
+    (coins 191)
+    (worldmap-sprite "images/worldmap/common/tux.sprite")
+    (last-worldmap "")
+  )
+  (state
+    ("worlds"
+      ("/levels/bonus1/worldmap.stwm"
+        ("levels"
+          ("bonus-level1.stl"
+            (perfect #f)
+            ("statistics"
+              (coins-collected 33)
+              (secrets-found 0)
+              (time-needed 212.2722)
+              (secrets-found-total 2)
+              (badguys-killed-total 24)
+              (coins-collected-total 75)
+              (badguys-killed 9)
+            )
+            (solved #t)
+          )
+          ("matr1x-level2.stl"
+            (perfect #f)
+            (solved #f)
+          )
+          ("torfi-level3.stl"
+            (perfect #f)
+            (solved #f)
+          )
+          ("bonus-level3.stl"
+            (perfect #f)
+            (solved #f)
+          )
+          ("wansti-level4.stl"
+            (perfect #f)
+            (solved #f)
+          )
+          ("wansti-level3.stl"
+            (perfect #f)
+            (solved #f)
+          )
+          ("wansti-level1.stl"
+            (perfect #f)
+            (solved #f)
+          )
+          ("abednego-level1.stl"
+            (perfect #f)
+            (solved #f)
+          )
+          ("thompson-level2.stl"
+            (perfect #f)
+            ("statistics"
+              (coins-collected 172)
+              (secrets-found 0)
+              (time-needed 150.9547)
+              (secrets-found-total 2)
+              (badguys-killed-total 38)
+              (coins-collected-total 231)
+              (badguys-killed 22)
+            )
+            (solved #t)
+          )
+          ("torfi-level1.stl"
+            (perfect #f)
+            (solved #f)
+          )
+          ("matr1x-level3.stl"
+            (perfect #f)
+            (solved #f)
+          )
+          ("abednego-level3.stl"
+            (perfect #f)
+            (solved #f)
+          )
+          ("wansti-level5.stl"
+            (perfect #f)
+            (solved #f)
+          )
+          ("wansti-level2.stl"
+            (perfect #f)
+            (solved #f)
+          )
+          ("bonus-level5.stl"
+            (perfect #f)
+            (solved #f)
+          )
+          ("abednego-level2.stl"
+            (perfect #f)
+            (solved #f)
+          )
+          ("abednego-level4.stl"
+            (perfect #f)
+            (solved #f)
+          )
+          ("bonus-level2.stl"
+            (perfect #f)
+            (solved #f)
+          )
+          ("matr1x-level1.stl"
+            (perfect #f)
+            (solved #f)
+          )
+          ("bonus-level4.stl"
+            (perfect #f)
+            (solved #f)
+          )
+          ("thompson-level1.stl"
+            (perfect #f)
+            ("statistics"
+              (coins-collected 19)
+              (secrets-found 0)
+              (time-needed 93.20702)
+              (secrets-found-total 0)
+              (badguys-killed-total 15)
+              (coins-collected-total 19)
+              (badguys-killed 15)
+            )
+            (solved #t)
+          )
+          ("torfi-level2.stl"
+            (perfect #f)
+            (solved #f)
+          )
+        )
+        ("tux"
+          (y 17)
+          (x 21)
+          (back "west")
+        )
+        ("tilemaps"
+          ("snow"
+            (alpha 1)
+          )
+          ("waves"
+            (alpha 1)
+          )
+          ("water"
+            (alpha 1)
+          )
+          ("foreground"
+            (alpha 1)
+          )
+          ("paths"
+            (alpha 1)
+          )
+          ("secret path"
+            (alpha 1)
+          )
+        )
+      )
+    )
+  )
+)

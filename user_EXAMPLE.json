@@ -1,0 +1,8 @@
+{
+    "MachineName": "mycomputer",
+    "Paths": {
+        "Game1": "~/.config/game1/saves",
+        "Game2": "~/.game2",
+        "Game3": "%localappdata%/game3"
+    }
+}

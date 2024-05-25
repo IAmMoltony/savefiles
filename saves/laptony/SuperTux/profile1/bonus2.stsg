@@ -1,0 +1,162 @@
+(supertux-savegame
+  (version 1)
+  (title "Bonus Island II (0/28)")
+  (tux
+    (bonus "none")
+    (fireflowers 0)
+    (iceflowers 0)
+    (airflowers 0)
+    (earthflowers 0)
+    (coins 115)
+    (worldmap-sprite "images/worldmap/common/tux.sprite")
+    (last-worldmap "")
+  )
+  (state
+    ("worlds"
+      ("/levels/bonus2/worldmap.stwm"
+        ("levels"
+          ("level10.stl"
+            (perfect #f)
+            (solved #f)
+          )
+          ("level28.stl"
+            (perfect #f)
+            (solved #f)
+          )
+          ("level8.stl"
+            (perfect #f)
+            (solved #f)
+          )
+          ("level9.stl"
+            (perfect #f)
+            (solved #f)
+          )
+          ("level6.stl"
+            (perfect #f)
+            (solved #f)
+          )
+          ("level2.stl"
+            (perfect #f)
+            (solved #f)
+          )
+          ("level17.stl"
+            (perfect #f)
+            (solved #f)
+          )
+          ("level27.stl"
+            (perfect #f)
+            (solved #f)
+          )
+          ("level26.stl"
+            (perfect #f)
+            (solved #f)
+          )
+          ("level14.stl"
+            (perfect #f)
+            (solved #f)
+          )
+          ("level5.stl"
+            (perfect #f)
+            (solved #f)
+          )
+          ("level25.stl"
+            (perfect #f)
+            (solved #f)
+          )
+          ("level22.stl"
+            (perfect #f)
+            (solved #f)
+          )
+          ("level21.stl"
+            (perfect #f)
+            (solved #f)
+          )
+          ("level7.stl"
+            (perfect #f)
+            (solved #f)
+          )
+          ("level19.stl"
+            (perfect #f)
+            (solved #f)
+          )
+          ("level23.stl"
+            (perfect #f)
+            (solved #f)
+          )
+          ("level11.stl"
+            (perfect #f)
+            (solved #f)
+          )
+          ("level20.stl"
+            (perfect #f)
+            (solved #f)
+          )
+          ("level24.stl"
+            (perfect #f)
+            (solved #f)
+          )
+          ("level12.stl"
+            (perfect #f)
+            (solved #f)
+          )
+          ("level4.stl"
+            (perfect #f)
+            (solved #f)
+          )
+          ("level13.stl"
+            (perfect #f)
+            (solved #f)
+          )
+          ("level18.stl"
+            (perfect #f)
+            (solved #f)
+          )
+          ("level1.stl"
+            (perfect #f)
+            (solved #f)
+          )
+          ("level3.stl"
+            (perfect #f)
+            (solved #f)
+          )
+          ("level16.stl"
+            (perfect #f)
+            (solved #f)
+          )
+          ("level15.stl"
+            (perfect #f)
+            (solved #f)
+          )
+        )
+        ("tux"
+          (y 19)
+          (x 22)
+          (back "north")
+        )
+        ("tilemaps"
+          ("snow"
+            (alpha 1)
+          )
+          ("secretpath"
+            (alpha 1)
+          )
+          ("trees"
+            (alpha 1)
+          )
+          ("water"
+            (alpha 1)
+          )
+          ("Streaming"
+            (alpha 1)
+          )
+          ("path"
+            (alpha 1)
+          )
+          ("waves"
+            (alpha 1)
+          )
+        )
+      )
+    )
+  )
+)
