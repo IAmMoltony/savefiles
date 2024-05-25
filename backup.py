@@ -6,7 +6,7 @@ import sys
 from user import User
 from backuppers import BACKUPPERS
 
-__version__ = "1.0"
+__version__ = "1.0.1"
 
 def set_wd():
     script_path = os.path.abspath(__file__)
@@ -20,6 +20,10 @@ def main():
     args = parser.parse_args()
 
     set_wd()
+
+    if not os.path.exists("./user.json"):
+        print("user.json not found, please create")
+        sys.exit(1)
 
     user = User()
     user.load()
