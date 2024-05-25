@@ -1,4 +1,3 @@
-
 # savefiles changelog
 
 Changelog for savefiles backup tools.
@@ -10,4 +9,3 @@ Changelog for savefiles backup tools.
 ## 1.0
 
 - Initial release
-

@@ -1,4 +1,3 @@
-
 # savefiles
 
 This is my repository for backing up game save files.
@@ -38,38 +37,38 @@ Adding support for new games is quite simple.
 
 1. Create a `backupper_game.py`, replace `game` with the name of the game.
 1. Add the following code (do not forget to replace the game name):
-    ```python
-    from backupper import Backupper
+   ```python
+   from backupper import Backupper
 
-    class GameBackupper(Backupper): # <-- Replace the game name!
-        def __init__(self, paths: dict[str], machine_name: str):
-            super().__init__(paths, machine_name, "GameName") # <-- Replace the game name!
+   class GameBackupper(Backupper): # <-- Replace the game name!
+       def __init__(self, paths: dict[str], machine_name: str):
+           super().__init__(paths, machine_name, "GameName") # <-- Replace the game name!
 
-        def backup(self):
-            # This is where the actual backup procedure happens
-            # Example:
-            self.copyall() # Copy all files from the save directory to the repo
-            # See section "API reference" below
-    ```
+       def backup(self):
+           # This is where the actual backup procedure happens
+           # Example:
+           self.copyall() # Copy all files from the save directory to the repo
+           # See section "API reference" below
+   ```
 1. Add your backupper to `backuppers.py`:
-    1. Add an import line at the top (replace the game name):
-        ```python
-        from backupper_game import GameBackupper
-        ```
-    1. Add it to the list of backuppers (do not forget to replace the game name):
-        ```python
-        BACKUPPERS = {
-            # ... other games ...
-            "GameName": GameBackupper
-        }
-        ```
+   1. Add an import line at the top (replace the game name):
+      ```python
+      from backupper_game import GameBackupper
+      ```
+   1. Add it to the list of backuppers (do not forget to replace the game name):
+      ```python
+      BACKUPPERS = {
+          # ... other games ...
+          "GameName": GameBackupper
+      }
+      ```
 1. Optionally, add it to `user.json`.
 
 ## API reference
 
 There are multiple functions for save file backup.
 
----
+______________________________________________________________________
 
 ```python
 self.copyall()
@@ -84,7 +83,7 @@ def backup(self):
     self.copyall() # copy everything!!!
 ```
 
----
+______________________________________________________________________
 
 ```python
 self.copydir(directory)
@@ -99,7 +98,7 @@ def backup(self):
     self.copydir("replay") # Copy all files from the replay folder
 ```
 
----
+______________________________________________________________________
 
 ```python
 self.copydirwc(pattern)
@@ -114,7 +113,7 @@ def backup(self):
     self.copydirwc("profile*") # Copy all directories that start with `profile`
 ```
 
----
+______________________________________________________________________
 
 ```python
 self.copyfile(file)
