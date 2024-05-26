@@ -2,6 +2,10 @@
 
 Changelog for savefiles backup tools.
 
+## 1.1.1
+
+- Fixed CLI not having correct exit code
+
 ## 1.1
 
 - Added a GUI for easy use

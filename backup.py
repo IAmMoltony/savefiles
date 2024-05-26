@@ -7,7 +7,7 @@ import gui
 from user import User
 from backuppers import BACKUPPERS
 
-__version__ = "1.1"
+__version__ = "1.1.1"
 
 
 def set_wd():
@@ -88,7 +88,8 @@ def entry():
 
     set_wd()
 
-    main(args.action, args.game)
+    if not main(args.action, args.game):
+        sys.exit(1)
 
 
 if __name__ == "__main__":
