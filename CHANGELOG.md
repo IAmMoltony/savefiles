@@ -34,4 +34,3 @@ Changelog for savefiles backup tools.
 ### 1.0
 
 - Initial release
-
