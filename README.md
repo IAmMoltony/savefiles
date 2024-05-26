@@ -24,7 +24,11 @@ To start the GUI, run `./backup.py gui` and then it will show up. Using the
 GUI is very straightforward from there.
 
 If you want to add the GUI to your application menu or on your desktop,
-there is a desktop entry available (see `sfgui.desktop`)
+there is a desktop entry available (see `sfgui.desktop`).
+
+**Important**: when using the desktop entry, make sure to replace the path to
+the `backup.py` script, the icon and working directory to point to your copy of
+the repository.
 
 ## Supported games
 
