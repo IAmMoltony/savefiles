@@ -30,6 +30,20 @@ there is a desktop entry available (see `sfgui.desktop`).
 the `backup.py` script, the icon and working directory to point to your copy of
 the repository.
 
+## Automatic backup
+
+Backups of games can be run automatically.
+
+### Setting it up
+
+1. Copy `autobackup_credentials_EXAMPLE.json` as `autobackup_credentiials.json`.
+1. Add your email credentials.
+1. That's literally it
+
+### Usage
+
+Run the `autobackup.py` script, it'll take care of everything.
+
 ## Supported games
 
 - Minecraft (`Minecraft`)

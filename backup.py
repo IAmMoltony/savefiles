@@ -4,16 +4,11 @@ import argparse
 import os
 import sys
 import gui
+import util
 from user import User
 from backuppers import BACKUPPERS
 
 __version__ = "1.3"
-
-
-def set_wd():
-    script_path = os.path.abspath(__file__)
-    script_dir = os.path.dirname(script_path)
-    os.chdir(script_dir)
 
 
 def main(action: str, game_name: str = None):
@@ -68,6 +63,11 @@ def main(action: str, game_name: str = None):
         gui.start_gui()
         return True
     return True
+
+def set_wd():
+    script_path = os.path.abspath(__file__)
+    script_dir = os.path.dirname(script_path)
+    os.chdir(script_dir)
 
 
 def entry():
