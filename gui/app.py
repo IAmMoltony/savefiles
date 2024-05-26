@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import scrolledtext
 import backup
-from gui import stdout_capture
+from util import stdout_capture
 from gui import enterbox
 
 class SavefilesApp(tk.Tk):
