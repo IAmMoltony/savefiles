@@ -2,6 +2,10 @@
 
 Changelog for savefiles backup tools.
 
+## 1.3
+
+- Added support for *Forager*
+
 ## 1.2
 
 - Added support for *Touhou 8: Imperishable Night*

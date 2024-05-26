@@ -31,6 +31,7 @@ GUI is very straightforward from there.
 - Touhou 8: Imperishable Night (`Touhou08`)
 - Baba Is You (`BabaIsYou`)
 - Super Tux (`SuperTux`)
+- Forager (`Forager`)
 
 If you'd like to request support for a game, don't hesitate to open a GitHub
 issue about it.
