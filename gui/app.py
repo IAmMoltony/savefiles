@@ -31,6 +31,9 @@ class SavefilesApp(tk.Tk):
         self.button_single_backup = tk.Button(self, text="Backup one game", command=self.do_single_backup)
         self.button_single_backup.pack()
 
+        self.button_view_user = tk.Button(self, text="View user settings", command=self.do_view_user)
+        self.button_view_user.pack()
+
         self.scrolledtext_cmd_output = tk.scrolledtext.ScrolledText(self)
         self.scrolledtext_cmd_output.config(state="disabled")
         self.scrolledtext_cmd_output.pack()
@@ -46,22 +49,25 @@ class SavefilesApp(tk.Tk):
         self.scrolledtext_cmd_output.config(state="disabled")
 
     def do_all_backup(self):
-        print(f"[App] Doing all-game backup")
+        print("[App] Doing all-game backup")
         self.clear_cmd_output()
         self.button_single_backup.config(state="disabled")
         self.button_all_backup.config(state="disabled")
+        self.button_view_user.config(state="disabled")
         cap, old = stdout_capture.start()
         backup.main("backup")
         output = stdout_capture.end(cap, old)
         self.add_cmd_output(output)
         self.button_single_backup.config(state="normal")
         self.button_all_backup.config(state="normal")
+        self.button_view_user.config(state="normal")
 
     def do_single_backup(self):
-        print(f"[App] Doing single-game backup")
+        print("[App] Doing single-game backup")
         self.clear_cmd_output()
         self.button_single_backup.config(state="disabled")
         self.button_all_backup.config(state="disabled")
+        self.button_view_user.config(state="disabled")
         enterbox.EnterBox("What game do you want to back up?", self.single_backup_box_callback, self.single_backup_close_callback)
 
     def single_backup_box_callback(self, user_input):
@@ -71,8 +77,24 @@ class SavefilesApp(tk.Tk):
         self.add_cmd_output(output)
         self.button_single_backup.config(state="normal")
         self.button_all_backup.config(state="normal")
+        self.button_view_user.config(state="normal")
 
     def single_backup_close_callback(self):
         self.button_single_backup.config(state="normal")
         self.button_all_backup.config(state="normal")
+        self.button_view_user.config(state="normal")
+
+    def do_view_user(self):
+        print("[App] Viewing user settings")
+        self.clear_cmd_output()
+        self.button_single_backup.config(state="disabled")
+        self.button_all_backup.config(state="disabled")
+        self.button_view_user.config(state="disabled")
+        cap, old = stdout_capture.start()
+        backup.main("printuser")
+        output = stdout_capture.end(cap, old)
+        self.add_cmd_output(output)
+        self.button_single_backup.config(state="normal")
+        self.button_all_backup.config(state="normal")
+        self.button_view_user.config(state="normal")
 
