@@ -18,3 +18,7 @@ class Touhou06Backupper(TouhouBackupper):
 class Touhou07Backupper(TouhouBackupper):
     def __init__(self, paths: dict[str], machine_name: str):
         super().__init__(paths, machine_name, "07")
+
+class Touhou08Backupper(TouhouBackupper):
+    def __init__(self, paths: dict[str], machine_name: str):
+        super().__init__(paths, machine_name, "08")

@@ -28,6 +28,7 @@ GUI is very straightforward from there.
 - Minecraft (`Minecraft`)
 - Touhou 6: the Embodiment of Scarlet Devil (`Touhou06`)
 - Touhou 7: Perfect Cherry Blossom (`Touhou07`)
+- Touhou 8: Imperishable Night (`Touhou08`)
 - Baba Is You (`BabaIsYou`)
 - Super Tux (`SuperTux`)
 

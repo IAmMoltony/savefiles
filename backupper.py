@@ -41,7 +41,10 @@ class Backupper:
         dir_path = os.path.join(self.game_path, directory)
         dest_path = os.path.join(self.backup_path, directory)
         print(f"[{self.game_name}] Copy directory '{directory}'")
-        shutil.copytree(dir_path, dest_path, dirs_exist_ok=True)
+        try:
+            shutil.copytree(dir_path, dest_path, dirs_exist_ok=True)
+        except FileNotFoundError:
+            print(f"[{self.game_name}] Warning: directory '{directory}' not found, skipping")
 
     def copydirwc(self, pattern):
         abspattern = os.path.join(self.game_path, pattern)

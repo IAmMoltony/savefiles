@@ -7,7 +7,7 @@ import gui
 from user import User
 from backuppers import BACKUPPERS
 
-__version__ = "1.1.1"
+__version__ = "1.2"
 
 
 def set_wd():

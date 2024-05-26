@@ -2,6 +2,11 @@
 
 Changelog for savefiles backup tools.
 
+## 1.2
+
+- Added support for *Touhou 8: Imperishable Night*
+- Copying directory does not crash if directory is not found
+
 ## 1.1.1
 
 - Fixed CLI not having correct exit code
