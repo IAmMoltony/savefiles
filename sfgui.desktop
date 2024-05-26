@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Savefiles GUI
+Comment=Savefiles Backup GUI Application
+Exec=/home/moltony/savefiles/backup.py gui
+Icon=/home/moltony/savefiles/guiicon.png
+Path=/home/moltony/savefiles
+Terminal=false
+StartupNotify=false

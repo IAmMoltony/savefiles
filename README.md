@@ -23,6 +23,9 @@ your games, run `./backup.py backup`, and to back up a specific game, run
 To start the GUI, run `./backup.py gui` and then it will show up. Using the
 GUI is very straightforward from there.
 
+If you want to add the GUI to your application menu or on your desktop,
+there is a desktop entry available (see `sfgui.desktop`)
+
 ## Supported games
 
 - Minecraft (`Minecraft`)
