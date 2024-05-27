@@ -11,7 +11,7 @@ from email.mime.text import MIMEText
 import json
 import os
 
-__version__ = "1.0"
+__version__ = "1.0.1"
 
 
 @dataclass
@@ -74,7 +74,7 @@ def send_email(backup_ok, output, cpo, right_now):
             f"Your save files have been backed up automatically at {right_now}.\n\n"
         )
 
-    email_text += "________________________\n\nBackup script output:\n\n{output}\n\nGit add output (stderr):\n\n{cpo.git_add_stderr}\n\nGit commit output (stdout):\n\n{cpo.git_commit_stdout}\n\nGit commit output (stderr):\n\n{cpo.git_commit_stderr}\n\nGit push output (stdout):\n\n{cpo.git_push_stdout}\n\nGit push output (stderr):\n\n{cpo.git_push_stderr}\n\nSincerely, autobackup.py version {__version__}."
+    email_text += f"________________________\n\nBackup script output:\n\n{output}\n\nGit add output (stderr):\n\n{cpo.git_add_stderr}\n\nGit commit output (stdout):\n\n{cpo.git_commit_stdout}\n\nGit commit output (stderr):\n\n{cpo.git_commit_stderr}\n\nGit push output (stdout):\n\n{cpo.git_push_stdout}\n\nGit push output (stderr):\n\n{cpo.git_push_stderr}\n\nSincerely, autobackup.py version {__version__}."
 
     message = MIMEText(email_text)
     message["Subject"] = f"Automatic save files backup at {right_now}"
