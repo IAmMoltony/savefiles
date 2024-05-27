@@ -1,5 +1,5 @@
 from backupper_minecraft import MinecraftBackupper
-from backupper_touhou import Touhou06Backupper, Touhou07Backupper, Touhou08Backupper
+from backupper_touhou import Touhou06Backupper, Touhou07Backupper, Touhou08Backupper, Touhou18Backupper
 from backupper_babaisyou import BabaIsYouBackupper
 from backupper_supertux import SuperTuxBackupper
 from backupper_forager import ForagerBackupper
@@ -9,6 +9,7 @@ BACKUPPERS = {
     "Touhou06": Touhou06Backupper,
     "Touhou07": Touhou07Backupper,
     "Touhou08": Touhou08Backupper,
+    "Touhou18": Touhou18Backupper,
     "BabaIsYou": BabaIsYouBackupper,
     "SuperTux": SuperTuxBackupper,
     "Forager": ForagerBackupper
