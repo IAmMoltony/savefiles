@@ -424,6 +424,12 @@
     },
     "done": true
   },
+  "minecraft:nether/fast_travel": {
+    "criteria": {
+      "travelled": "2024-05-28 19:05:59 +0500"
+    },
+    "done": true
+  },
   "minecraft:recipes/redstone/hopper": {
     "criteria": {
       "has_iron_ingot": "2024-05-20 19:28:25 +0500"
@@ -1600,20 +1606,27 @@
   },
   "minecraft:adventure/adventuring_time": {
     "criteria": {
+      "ice_flats": "2024-05-28 19:05:59 +0500",
+      "frozen_river": "2024-05-28 19:06:43 +0500",
+      "taiga_cold_hills": "2024-05-28 19:25:15 +0500",
       "forest": "2024-05-20 19:21:28 +0500",
       "birch_forest": "2024-05-20 19:23:36 +0500",
+      "swampland": "2024-05-28 19:49:41 +0500",
       "deep_ocean": "2024-05-27 16:59:45 +0500",
       "beaches": "2024-05-27 16:58:42 +0500",
       "extreme_hills_with_trees": "2024-05-20 20:25:05 +0500",
       "forest_hills": "2024-05-20 19:29:20 +0500",
       "plains": "2024-05-24 18:12:19 +0500",
+      "ice_mountains": "2024-05-28 19:19:39 +0500",
       "redwood_taiga": "2024-05-20 19:54:36 +0500",
       "taiga": "2024-05-20 19:23:29 +0500",
       "redwood_taiga_hills": "2024-05-20 19:39:04 +0500",
       "taiga_hills": "2024-05-20 19:36:41 +0500",
       "birch_forest_hills": "2024-05-24 18:17:16 +0500",
+      "taiga_cold": "2024-05-28 19:22:14 +0500",
       "ocean": "2024-05-27 16:59:51 +0500",
       "extreme_hills": "2024-05-20 20:25:13 +0500",
+      "roofed_forest": "2024-05-28 19:47:31 +0500",
       "river": "2024-05-20 19:23:21 +0500"
     },
     "done": false
