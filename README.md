@@ -50,6 +50,7 @@ Run the `autobackup.py` script, it'll take care of everything.
 - Touhou 6: the Embodiment of Scarlet Devil (`Touhou06`)
 - Touhou 7: Perfect Cherry Blossom (`Touhou07`)
 - Touhou 8: Imperishable Night (`Touhou08`)
+- Touhou 18: Unconnected Marketeers (`Touhou18`)
 - Baba Is You (`BabaIsYou`)
 - Super Tux (`SuperTux`)
 - Forager (`Forager`)
