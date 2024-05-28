@@ -871,7 +871,9 @@
     "criteria": {
       "zombie_pigman": "2024-05-27 13:57:00 +0500",
       "shulker": "2024-05-27 17:54:18 +0500",
+      "wither_skeleton": "2024-05-28 17:37:24 +0500",
       "zombie_villager": "2024-05-24 17:49:39 +0500",
+      "magma_cube": "2024-05-28 17:37:40 +0500",
       "skeleton": "2024-05-21 15:16:39 +0500",
       "blaze": "2024-05-27 13:52:34 +0500",
       "zombie": "2024-05-20 19:40:48 +0500",
@@ -882,6 +884,12 @@
     },
     "done": false
   },
+  "minecraft:story/enter_the_nether": {
+    "criteria": {
+      "entered_nether": "2024-05-27 13:31:07 +0500"
+    },
+    "done": true
+  },
   "minecraft:recipes/misc/ender_eye": {
     "criteria": {
       "has_blaze_powder": "2024-05-27 14:28:05 +0500"
@@ -891,12 +899,6 @@
   "minecraft:recipes/decorations/end_crystal": {
     "criteria": {
       "has_ender_eye": "2024-05-27 15:49:02 +0500"
-    },
-    "done": true
-  },
-  "minecraft:story/enter_the_nether": {
-    "criteria": {
-      "entered_nether": "2024-05-27 13:31:07 +0500"
     },
     "done": true
   },
@@ -1470,15 +1472,15 @@
     },
     "done": true
   },
-  "minecraft:story/form_obsidian": {
-    "criteria": {
-      "obsidian": "2024-05-27 18:10:18 +0500"
-    },
-    "done": true
-  },
   "minecraft:end/find_end_city": {
     "criteria": {
       "in_city": "2024-05-27 17:53:27 +0500"
+    },
+    "done": true
+  },
+  "minecraft:story/form_obsidian": {
+    "criteria": {
+      "obsidian": "2024-05-27 18:10:18 +0500"
     },
     "done": true
   },
