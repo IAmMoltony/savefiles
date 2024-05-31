@@ -22,6 +22,10 @@ class CommitPushOutput:
     git_push_stdout: str
     git_push_stderr: str
 
+def get_machine_name():
+    with open("./user.json", "r") as user_json:
+        return json.load(user_json)["MachineName"]
+
 
 def get_head_diff():
     show = subprocess.run(
@@ -77,7 +81,7 @@ def send_email(backup_ok, output, cpo, right_now):
     email_text += f"________________________\n\nBackup script output:\n\n{output}\n\nGit add output (stderr):\n\n{cpo.git_add_stderr}\n\nGit commit output (stdout):\n\n{cpo.git_commit_stdout}\n\nGit commit output (stderr):\n\n{cpo.git_commit_stderr}\n\nGit push output (stdout):\n\n{cpo.git_push_stdout}\n\nGit push output (stderr):\n\n{cpo.git_push_stderr}\n\nSincerely, autobackup.py version {__version__}."
 
     message = MIMEText(email_text)
-    message["Subject"] = f"Automatic save files backup at {right_now}"
+    message["Subject"] = f"{get_machine_name()}: Automatic save files backup at {right_now}"
     message["From"] = credentials["from-who"]
     message["To"] = credentials["to-who"]
     
