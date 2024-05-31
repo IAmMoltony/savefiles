@@ -16,7 +16,7 @@ The backup tool can be used as a CLI and as a GUI.
 
 To use the CLI, run the `backup.py` script in your terminal. To back up all
 your games, run `./backup.py backup`, and to back up a specific game, run
-`./backup.py backup -g (game name here`.
+`./backup.py backup -g (game name here)`.
 
 ### GUI
 
