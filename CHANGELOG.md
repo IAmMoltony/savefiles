@@ -31,6 +31,10 @@ Changelog for savefiles backup tools.
 
 ## `autobackup.py`
 
+### 1.0.2
+
+- Fixed sending emails when there is no changes
+
 ### 1.0.1
 
 - Fixed incorrect email text

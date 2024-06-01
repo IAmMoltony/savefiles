@@ -11,7 +11,7 @@ from email.mime.text import MIMEText
 import json
 import os
 
-__version__ = "1.0.1"
+__version__ = "1.0.2"
 
 
 @dataclass
@@ -21,6 +21,7 @@ class CommitPushOutput:
     git_commit_stderr: str
     git_push_stdout: str
     git_push_stderr: str
+    no_changes: bool
 
 def get_machine_name():
     with open("./user.json", "r") as user_json:
@@ -44,6 +45,16 @@ def commit_push(right_now):
         stderr=subprocess.PIPE,
         text=True,
     )
+    git_status_env = os.environ.copy()
+    git_status_env["LC_ALL"] = "C"
+    git_status = subprocess.run(
+        ["git", "status"],
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.PIPE,
+        text=True,
+        env=git_status_env
+    )
+    no_changes = "nothing to commit, working directory clean" in git_status.stdout
     git_commit = subprocess.run(
         ["git", "commit", "-m", f"Automatic backup: {right_now}"],
         stdout=subprocess.PIPE,
@@ -59,6 +70,7 @@ def commit_push(right_now):
         git_commit.stderr,
         git_push.stdout,
         git_push.stderr,
+        no_changes
     )
 
 def get_credentials():
@@ -112,6 +124,9 @@ def main():
     output = stdout_capture.end(cap, old)
 
     cpo = commit_push(right_now)
+    if cpo.no_changes:
+        print("[Auto] No changes")
+        sys.exit(1)
 
     send_email(backup_ok, output, cpo, right_now)
 
