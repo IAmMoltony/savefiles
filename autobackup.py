@@ -49,7 +49,7 @@ def commit_push(right_now):
     git_status_env["LC_ALL"] = "C"
     git_status = subprocess.run(
         ["git", "status"],
-        stdout=subprocess.DEVNULL,
+        stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
         text=True,
         env=git_status_env
