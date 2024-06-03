@@ -374,6 +374,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/redstone/dark_oak_door": {
+    "criteria": {
+      "has_planks": "2024-06-03 13:42:40 +0500"
+    },
+    "done": true
+  },
   "minecraft:husbandry/balanced_diet": {
     "criteria": {
       "chorus_fruit": "2024-05-27 18:06:40 +0500",
@@ -929,6 +935,12 @@
     },
     "done": false
   },
+  "minecraft:recipes/building_blocks/dark_oak_stairs": {
+    "criteria": {
+      "has_planks": "2024-06-03 13:42:40 +0500"
+    },
+    "done": true
+  },
   "minecraft:story/enter_the_nether": {
     "criteria": {
       "entered_nether": "2024-05-27 13:31:07 +0500"
@@ -1010,6 +1022,12 @@
   "minecraft:recipes/decorations/brown_bed": {
     "criteria": {
       "has_brown_wool": "2024-05-27 15:39:59 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/dark_oak_fence_gate": {
+    "criteria": {
+      "has_planks": "2024-06-03 13:42:40 +0500"
     },
     "done": true
   },
@@ -1289,6 +1307,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/stone_slab": {
+    "criteria": {
+      "has_stone": "2024-06-03 13:42:18 +0500"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/coal_block": {
     "criteria": {
       "has_at_least_9_coal": "2024-05-20 19:21:27 +0500"
@@ -1457,6 +1481,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/dark_oak_wooden_slab": {
+    "criteria": {
+      "has_planks": "2024-06-03 13:42:40 +0500"
+    },
+    "done": true
+  },
   "minecraft:recipes/combat/iron_boots": {
     "criteria": {
       "has_iron_ingot": "2024-05-20 19:28:25 +0500"
@@ -1502,6 +1532,12 @@
   "minecraft:story/root": {
     "criteria": {
       "crafting_table": "2024-05-20 19:27:01 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/stone_button": {
+    "criteria": {
+      "has_stone": "2024-06-03 13:42:18 +0500"
     },
     "done": true
   },
@@ -1586,6 +1622,12 @@
   "minecraft:recipes/tools/compass": {
     "criteria": {
       "has_redstone": "2024-05-20 19:59:09 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/repeater": {
+    "criteria": {
+      "has_redstone_torch": "2024-06-03 13:42:51 +0500"
     },
     "done": true
   },
@@ -1741,6 +1783,12 @@
   "minecraft:recipes/building_blocks/brown_stained_glass": {
     "criteria": {
       "has_glass": "2024-05-21 15:53:24 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/stone_pressure_plate": {
+    "criteria": {
+      "has_stone": "2024-06-03 13:42:18 +0500"
     },
     "done": true
   },
@@ -1906,6 +1954,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/stonebrick": {
+    "criteria": {
+      "has_stone": "2024-06-03 13:42:18 +0500"
+    },
+    "done": true
+  },
   "minecraft:recipes/redstone/piston": {
     "criteria": {
       "has_redstone": "2024-05-20 19:59:09 +0500"
@@ -1933,6 +1987,12 @@
   "minecraft:recipes/misc/diamond": {
     "criteria": {
       "has_the_recipe": "2024-05-20 19:21:27 +0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/dark_oak_fence": {
+    "criteria": {
+      "has_planks": "2024-06-03 13:42:40 +0500"
     },
     "done": true
   },
