@@ -4,6 +4,7 @@ import backup
 from util import stdout_capture
 from util import file_opener
 from gui import enterbox
+from gui import infobox
 
 class SavefilesApp(tk.Tk):
     def __init__(self):
@@ -90,7 +91,8 @@ class SavefilesApp(tk.Tk):
 
     def do_edit_user(self):
         print("[App] Editing user settings")
-        file_opener.open_file("./user.json")
+        if not file_opener.open_file("./user.json"):
+            infobox.InfoBox("Error: could not open user.json file")
 
     def set_buttons_state(self, state):
         self.button_single_backup.config(state=state)
