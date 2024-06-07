@@ -2,7 +2,11 @@
 
 Changelog for savefiles backup tools.
 
-## `backup.py`
+## Main backup tools: `backup.py` and GUI
+
+### 1.4
+
+- GUI: added button to edit `user.json`
 
 ### 1.3
 
