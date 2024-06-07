@@ -1635,6 +1635,7 @@
   "minecraft:husbandry/balanced_diet": {
     "criteria": {
       "chorus_fruit": "2024-05-27 18:06:40 +0500",
+      "cooked_beef": "2024-06-07 13:07:44 +0500",
       "apple": "2024-05-20 19:34:32 +0500",
       "bread": "2024-05-20 19:34:28 +0500",
       "rotten_flesh": "2024-06-02 21:20:43 +0500",
