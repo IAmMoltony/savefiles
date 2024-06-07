@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import scrolledtext
 import backup
 from util import stdout_capture
+from util import file_opener
 from gui import enterbox
 
 class SavefilesApp(tk.Tk):
@@ -33,6 +34,9 @@ class SavefilesApp(tk.Tk):
 
         self.button_view_user = tk.Button(self, text="View user settings", command=self.do_view_user)
         self.button_view_user.pack()
+
+        self.button_edit_user = tk.Button(self, text="Edit user settings", command=self.do_edit_user)
+        self.button_edit_user.pack()
 
         self.scrolledtext_cmd_output = tk.scrolledtext.ScrolledText(self)
         self.scrolledtext_cmd_output.config(state="disabled")
@@ -83,6 +87,10 @@ class SavefilesApp(tk.Tk):
         output = stdout_capture.end(cap, old)
         self.add_cmd_output(output)
         self.set_buttons_state("normal")
+
+    def do_edit_user(self):
+        print("[App] Editing user settings")
+        file_opener.open_file("./user.json")
 
     def set_buttons_state(self, state):
         self.button_single_backup.config(state=state)
