@@ -32,13 +32,8 @@ the repository.
 
 ## Automatic backup
 
-Backups of games can be run automatically.
-
-### Setting it up
-
-1. Copy `autobackup_credentials_EXAMPLE.json` as `autobackup_credentials.json`.
-1. Add your email credentials.
-1. That's literally it
+Backups of games can be run automatically. Add `autobackup.sh` to your crontab
+or something, and that's all you have to do.
 
 ### Usage
 

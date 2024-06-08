@@ -1,4 +1,3 @@
 *.swp
 user.json
 __pycache__/
-credentials.json
