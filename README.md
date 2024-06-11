@@ -37,7 +37,7 @@ or something, and that's all you have to do.
 
 ### Usage
 
-Run the `autobackup.py` script, it'll take care of everything.
+Run the `autobackup.sh` script, it'll take care of everything.
 
 ## Supported games
 
@@ -149,3 +149,20 @@ Example:
 def backup(self):
     self.copyfile("score.txt") # Copy score.txt and nothing else
 ```
+
+______________________________________________________________________
+
+```python
+self.listdir(dir)
+```
+
+List contents of a subdirectory in the save file directory.
+
+Example:
+
+```python
+def backup(self):
+    save_files = self.listdir("saves")
+    print(save_files)
+```
+
