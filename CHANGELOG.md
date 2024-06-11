@@ -2,6 +2,11 @@
 
 Changelog for savefiles backup tools.
 
+## 1.5
+
+- Added per-game config
+- Added ignoring worlds in Minecraft backupper
+
 ## 1.4
 
 - GUI: added button to edit `user.json`
