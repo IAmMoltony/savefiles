@@ -37,7 +37,10 @@ def main(action: str, game_name: str = None):
 
         backupper_objects = []
         for cls in backupper_classes:
-            backupper_objects.append(cls(user.paths, user.machine_name))
+            try:
+                backupper_objects.append(cls(user.paths, user.machine_name, user.config))
+            except TypeError:
+                backupper_objects.append(cls(user.paths, user.machine_name))
 
         if game_name is not None:
             game_backupper = None

@@ -8,10 +8,15 @@ class BackupperError(Exception):
 
 
 class Backupper:
-    def __init__(self, paths: dict[str], machine_name: str, game_name: str):
+    def __init__(self, paths: dict[str], machine_name: str, game_name: str, config: dict = None):
         self.game_name = game_name
         self.game_path = paths[game_name]
         self.backup_path = os.path.join(".", "saves", machine_name, self.game_name)
+
+        try:
+            self.config = config[self.game_name]
+        except TypeError:
+            pass # no config
 
         try:
             os.makedirs(self.backup_path, exist_ok=True)
@@ -61,3 +66,6 @@ class Backupper:
         dest_path = os.path.join(self.backup_path, file)
         print(f"[{self.game_name}] Copy file '{file}'")
         shutil.copy2(file_path, dest_path)
+
+    def listdir(self, dir):
+        return os.listdir(os.path.join(self.game_path, dir))
