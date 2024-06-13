@@ -7,17 +7,22 @@ import gui
 import util
 from user import User
 from backuppers import BACKUPPERS
+from backupper import Backupper
 
 __version__ = "1.6"
 
 
-def main(action: str, game_name: str = None):
+def main(action: str, game_name: str = None, dry: bool = False):
     if not os.path.exists("./user.json"):
         print("user.json not found, please create")
         return False
 
     user = User()
     user.load()
+
+    Backupper.dry_run = dry
+    if dry:
+        print("[Backup] Dry-run enabled, not making any changes")
 
     if action == "version":
         print(f"Backup.py version {__version__}")
@@ -87,11 +92,17 @@ def entry():
         type=str,
         help="when 'backup' action, only backup the specified game",
     )
+    parser.add_argument(
+        "--dry",
+        "-d",
+        action="store_true",
+        help="when 'backup' action, don't do any actual changes"
+    )
     args = parser.parse_args()
 
     set_wd()
 
-    if not main(args.action, args.game):
+    if not main(args.action, args.game, args.dry):
         sys.exit(1)
 
 

@@ -8,15 +8,16 @@ class BackupperError(Exception):
 
 
 class Backupper:
+    dry_run = False # kinda dodgy putting this as a static variable but i couldn't come up with
+                    # a better solution that was also backwards compatible
+
     def __init__(self, paths: dict[str], machine_name: str, game_name: str, config: dict = None):
         self.game_name = game_name
         self.game_path = paths[game_name]
         self.backup_path = os.path.join(".", "saves", machine_name, self.game_name)
 
-        try:
-            self.config = config[self.game_name]
-        except TypeError:
-            pass # no config
+        if config is not None and game_name in config:
+            self.config = config[game_name]
 
         try:
             os.makedirs(self.backup_path, exist_ok=True)
@@ -29,6 +30,9 @@ class Backupper:
 
     def copyall(self):
         print(f"[{self.game_name}] Copy all from {self.game_path}")
+
+        if self.dry_run:
+            return
 
         for item in os.listdir(self.game_path):
             absitem = os.path.join(self.game_path, item)
