@@ -7,6 +7,7 @@ class User:
         self.machine_name = ""
         self.paths = {}
         self.config = {}
+        self.alt_save_location = None
 
     def load(self):
         with open("./user.json", "r") as user_json:
@@ -15,6 +16,8 @@ class User:
             self.paths = user["Paths"]
             if "Config" in user:
                 self.config = user["Config"]
+            if "AltSaveLocation" in user:
+                self.alt_save_location = os.path.expandvars(os.path.expanduser(user["AltSaveLocation"]))
 
         # expand paths
         for game in self.paths:
@@ -30,6 +33,9 @@ class User:
         s += "[User] Config:\n"
         for game, config in self.config.items():
             s += f"[User] \t{game}: {config}\n"
+
+        if self.alt_save_location is not None:
+            s += f"[User] Alternative save location: {self.alt_save_location}\n"
 
         s = s[:-1]
         return s
