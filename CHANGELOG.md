@@ -2,6 +2,12 @@
 
 Changelog for savefiles backup tools.
 
+## 1.6
+
+- Added dry-run mode
+- Fixed Minecraft backupper crashing if there is no `IgnoreWorlds` entry in config
+- Fixed crashing if no config found
+
 ## 1.5
 
 - Added per-game config
