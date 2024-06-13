@@ -13,7 +13,8 @@ class User:
             user = json.load(user_json)
             self.machine_name = user["MachineName"]
             self.paths = user["Paths"]
-            self.config = user["Config"]
+            if "Config" in user:
+                self.config = user["Config"]
 
         # expand paths
         for game in self.paths:
