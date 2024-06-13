@@ -2,6 +2,10 @@
 
 Changelog for savefiles backup tools.
 
+## 1.7.1
+
+- Added handling error when missing required options
+
 ## 1.7
 
 - Added alternative save location
