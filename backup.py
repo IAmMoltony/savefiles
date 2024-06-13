@@ -9,7 +9,7 @@ from user import User
 from backuppers import BACKUPPERS
 from backupper import Backupper
 
-__version__ = "1.7"
+__version__ = "1.7.1"
 
 
 def main(action: str, game_name: str = None, dry: bool = False):
