@@ -2,6 +2,10 @@
 
 Changelog for savefiles backup tools.
 
+## 1.7
+
+- Added alternative save location
+
 ## 1.6
 
 - Added dry-run mode
