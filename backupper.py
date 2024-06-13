@@ -8,13 +8,17 @@ class BackupperError(Exception):
 
 
 class Backupper:
-    dry_run = False # kinda dodgy putting this as a static variable but i couldn't come up with
-                    # a better solution that was also backwards compatible
+    dry_run = False
+    alt_save_location = None
 
     def __init__(self, paths: dict[str], machine_name: str, game_name: str, config: dict = None):
         self.game_name = game_name
         self.game_path = paths[game_name]
-        self.backup_path = os.path.join(".", "saves", machine_name, self.game_name)
+
+        if self.alt_save_location is not None:
+            self.backup_path = os.path.join(self.alt_save_location, machine_name, self.game_name)
+        else:
+            self.backup_path = os.path.join(".", "saves", machine_name, self.game_name)
 
         if config is not None and game_name in config:
             self.config = config[game_name]

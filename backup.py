@@ -21,6 +21,8 @@ def main(action: str, game_name: str = None, dry: bool = False):
     user.load()
 
     Backupper.dry_run = dry
+    Backupper.alt_save_location = user.alt_save_location
+
     if dry:
         print("[Backup] Dry-run enabled, not making any changes")
 
