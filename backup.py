@@ -8,7 +8,7 @@ import util
 from user import User
 from backuppers import BACKUPPERS
 
-__version__ = "1.5"
+__version__ = "1.6"
 
 
 def main(action: str, game_name: str = None):
