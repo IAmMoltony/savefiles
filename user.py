@@ -12,8 +12,18 @@ class User:
     def load(self):
         with open("./user.json", "r") as user_json:
             user = json.load(user_json)
-            self.machine_name = user["MachineName"]
-            self.paths = user["Paths"]
+            if "MachineName" in user:
+                self.machine_name = user["MachineName"]
+            else:
+                print("[User] MachineName not found!")
+                return False
+            
+            if "Paths" in user:
+                self.paths = user["Paths"]
+            else:
+                print("[User] Paths not found!")
+                return False
+
             if "Config" in user:
                 self.config = user["Config"]
             if "AltSaveLocation" in user:
@@ -23,6 +33,8 @@ class User:
         for game in self.paths:
             path = self.paths[game]
             self.paths[game] = os.path.expandvars(os.path.expanduser(path))
+
+        return True
 
     def __str__(self):
         s = f"[User] Machine Name: {self.machine_name}\n[User] Paths:\n"

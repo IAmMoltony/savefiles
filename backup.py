@@ -18,7 +18,10 @@ def main(action: str, game_name: str = None, dry: bool = False):
         return False
 
     user = User()
-    user.load()
+    if not user.load():
+        print("[Backup] User load error")
+        return False
+
 
     Backupper.dry_run = dry
     Backupper.alt_save_location = user.alt_save_location
