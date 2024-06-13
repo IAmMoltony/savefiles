@@ -30,6 +30,11 @@ there is a desktop entry available (see `sfgui.desktop`).
 the `backup.py` script, the icon and working directory to point to your copy of
 the repository.
 
+## Configuration
+
+All configuration is done via the `user.json` file. See `User.md` for more
+information.
+
 ## Automatic backup
 
 Backups of games can be run automatically. Add `autobackup.sh` to your crontab
