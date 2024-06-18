@@ -2,6 +2,10 @@
 
 Changelog for savefiles backup tools.
 
+## 1.8
+
+- Added support for *Peggle*.
+
 ## 1.7.1
 
 - Added handling error when missing required options
