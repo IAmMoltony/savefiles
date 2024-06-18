@@ -3,6 +3,7 @@ from backupper_touhou import Touhou06Backupper, Touhou07Backupper, Touhou08Backu
 from backupper_babaisyou import BabaIsYouBackupper
 from backupper_supertux import SuperTuxBackupper
 from backupper_forager import ForagerBackupper
+from backupper_peggle import PeggleBackupper
 
 BACKUPPERS = {
     "Minecraft": MinecraftBackupper,
@@ -13,5 +14,6 @@ BACKUPPERS = {
     "Touhou18": Touhou18Backupper,
     "BabaIsYou": BabaIsYouBackupper,
     "SuperTux": SuperTuxBackupper,
-    "Forager": ForagerBackupper
+    "Forager": ForagerBackupper,
+    "Peggle": PeggleBackupper
 }
