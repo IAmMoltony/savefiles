@@ -54,6 +54,7 @@ Run the `autobackup.sh` script, it'll take care of everything.
 - Baba Is You (`BabaIsYou`)
 - Super Tux (`SuperTux`)
 - Forager (`Forager`)
+- Peggle (`Peggle`)
 
 If you'd like to request support for a game, don't hesitate to open a GitHub
 issue about it.
