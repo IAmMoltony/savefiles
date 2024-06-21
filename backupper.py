@@ -22,6 +22,8 @@ class Backupper:
 
         if config is not None and game_name in config:
             self.config = config[game_name]
+        else:
+            self.config = {}
 
         try:
             os.makedirs(self.backup_path, exist_ok=True)
