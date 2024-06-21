@@ -2,6 +2,10 @@
 
 Changelog for savefiles backup tools.
 
+## 1.8.1
+
+- Fixed bug
+
 ## 1.8
 
 - Added support for *Peggle*.
