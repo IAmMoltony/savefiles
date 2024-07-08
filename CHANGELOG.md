@@ -2,6 +2,11 @@
 
 Changelog for savefiles backup tools.
 
+## 1.9
+
+- Added support for *Animal Crossing* using the *Dolphin* emulator
+- Corrected dry-run behavior in `copyall`, `copydirwc` and `copyfilewc`
+
 ## 1.8.1
 
 - Fixed bug
