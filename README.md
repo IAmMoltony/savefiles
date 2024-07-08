@@ -92,6 +92,36 @@ Adding support for new games is quite simple.
       ```
 1. Optionally, add it to `user.json`.
 
+### Emulated games
+
+If the game can be emulated using multiple emulation programs and their save file
+format is incompatible, create multiple backuppers inside one file.
+
+For this example, I'll write a backupper for a theoretical game called
+*Super Cirno 4* that runs on an, again, theoretical system called
+*Gaming Box*. The system has two emulators: *mtnbox* and *Orange*.
+
+This is what `backupper_supercirno4.py` would look like:
+
+```python
+from backupper import Backupper
+
+
+class SuperCirno4MtnboxBackupper(Backupper):
+    def __init__(self, paths: dict[str], machine_name: str, config: dict):
+        super().__init__(paths, machine_name, "SuperCirno4Mtnbox", config)
+
+    def backup(self):
+        self.copyfile("save_SCR4_3453.mbs")
+
+class SuperCirno4OrangeBackupper(Backupper):
+    def __init__(self, paths: dict[str], machine_name: str, config: dict):
+        super().__init__(paths, machine_name, "SuperCirno4Orange", config)
+
+    def backup(self):
+        self.copydir("SCR4")
+```
+
 ## API reference
 
 There are multiple functions for save file backup.
