@@ -144,6 +144,21 @@ def backup(self):
 ______________________________________________________________________
 
 ```python
+self.copyfilewc(pattern)
+```
+
+Copy files from the save file directory that follow a certain pattern.
+
+Example:
+
+```python
+def backup(self):
+    self.copyfilewc("SaveFile_*.qwe") # Copy all files that start with `SaveFile_` and end with `.qwe`
+```
+
+______________________________________________________________________
+
+```python
 self.copyfile(file)
 ```
 
