@@ -44,7 +44,10 @@ class Backupper:
             file_or_dir = "directory" if isdir else "file"
             print(f"[{self.game_name}] Copying {file_or_dir}: '{item}'")
 
-            if isdir and self.dry_run:
+            if self.dry_run:
+                continue
+
+            if isdir:
                 shutil.copytree(absitem, destitem, dirs_exist_ok=True)
             else:
                 shutil.copy2(absitem, destitem)
