@@ -91,3 +91,17 @@ class Backupper:
 
     def listdir(self, dir):
         return os.listdir(os.path.join(self.game_path, dir))
+
+    def copyfilewc(self, pattern):
+        abspattern = os.path.join(self.game_path, pattern)
+        print(f"[{self.game_name}] Copy pattern '{pattern}'")
+
+        if self.dry_run:
+            return
+
+        for game_file in glob.glob(abspattern):
+            if os.path.isfile(game_file):
+                print(f"[{self.game_name}] Copying file: '{game_file}'")
+                basename = os.path.basename(game_file)
+                destination = os.path.join(self.backup_path, basename)
+                shutil.copyfile(game_file, destination, follow_symlinks=True)

@@ -4,6 +4,7 @@ from backupper_babaisyou import BabaIsYouBackupper
 from backupper_supertux import SuperTuxBackupper
 from backupper_forager import ForagerBackupper
 from backupper_peggle import PeggleBackupper
+from backupper_acgcn import AnimalCrossingGCNDolphinBackupper
 
 BACKUPPERS = {
     "Minecraft": MinecraftBackupper,
@@ -15,5 +16,6 @@ BACKUPPERS = {
     "BabaIsYou": BabaIsYouBackupper,
     "SuperTux": SuperTuxBackupper,
     "Forager": ForagerBackupper,
-    "Peggle": PeggleBackupper
+    "Peggle": PeggleBackupper,
+    "AnimalCrossingGCNDolphin": AnimalCrossingGCNDolphinBackupper
 }
