@@ -37,9 +37,6 @@ class Backupper:
     def copyall(self):
         print(f"[{self.game_name}] Copy all from {self.game_path}")
 
-        if self.dry_run:
-            return
-
         for item in os.listdir(self.game_path):
             absitem = os.path.join(self.game_path, item)
             destitem = os.path.join(self.backup_path, item)
@@ -47,7 +44,7 @@ class Backupper:
             file_or_dir = "directory" if isdir else "file"
             print(f"[{self.game_name}] Copying {file_or_dir}: '{item}'")
 
-            if isdir:
+            if isdir and self.dry_run:
                 shutil.copytree(absitem, destitem, dirs_exist_ok=True)
             else:
                 shutil.copy2(absitem, destitem)
@@ -69,15 +66,14 @@ class Backupper:
         abspattern = os.path.join(self.game_path, pattern)
         print(f"[{self.game_name}] Copy pattern '{pattern}'")
 
-        if self.dry_run:
-            return
-
         for game_dir in glob.glob(abspattern):
             if os.path.isdir(game_dir):
                 print(f"[{self.game_name}] Copying directory: '{game_dir}'")
-                basename = os.path.basename(game_dir)
-                destination = os.path.join(self.backup_path, basename)
-                shutil.copytree(game_dir, destination, dirs_exist_ok=True)
+
+                if self.dry_run:
+                    basename = os.path.basename(game_dir)
+                    destination = os.path.join(self.backup_path, basename)
+                    shutil.copytree(game_dir, destination, dirs_exist_ok=True)
 
     def copyfile(self, file):
         file_path = os.path.join(self.game_path, file)
@@ -96,12 +92,11 @@ class Backupper:
         abspattern = os.path.join(self.game_path, pattern)
         print(f"[{self.game_name}] Copy pattern '{pattern}'")
 
-        if self.dry_run:
-            return
-
         for game_file in glob.glob(abspattern):
             if os.path.isfile(game_file):
                 print(f"[{self.game_name}] Copying file: '{game_file}'")
-                basename = os.path.basename(game_file)
-                destination = os.path.join(self.backup_path, basename)
-                shutil.copyfile(game_file, destination, follow_symlinks=True)
+
+                if self.dry_run:
+                    basename = os.path.basename(game_file)
+                    destination = os.path.join(self.backup_path, basename)
+                    shutil.copyfile(game_file, destination, follow_symlinks=True)
