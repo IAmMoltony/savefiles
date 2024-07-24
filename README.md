@@ -56,6 +56,7 @@ Run the `autobackup.sh` script, it'll take care of everything.
 - Forager (`Forager`)
 - Peggle (`Peggle`)
 - Animal Crossing (`AnimalCrossingGCNDolphin`)
+- Terraria (`Terraria`)
 
 If you'd like to request support for a game, don't hesitate to open a GitHub
 issue about it.
