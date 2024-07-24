@@ -5,6 +5,7 @@ from backupper_supertux import SuperTuxBackupper
 from backupper_forager import ForagerBackupper
 from backupper_peggle import PeggleBackupper
 from backupper_acgcn import AnimalCrossingGCNDolphinBackupper
+from backupper_terraria import TerrariaBackupper
 
 BACKUPPERS = {
     "Minecraft": MinecraftBackupper,
@@ -17,5 +18,6 @@ BACKUPPERS = {
     "SuperTux": SuperTuxBackupper,
     "Forager": ForagerBackupper,
     "Peggle": PeggleBackupper,
-    "AnimalCrossingGCNDolphin": AnimalCrossingGCNDolphinBackupper
+    "AnimalCrossingGCNDolphin": AnimalCrossingGCNDolphinBackupper,
+    "Terraria": TerrariaBackupper
 }
