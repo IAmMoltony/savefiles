@@ -3,13 +3,17 @@
 import argparse
 import os
 import sys
-import gui
 import util
 from user import User
 from backuppers import BACKUPPERS
 from backupper import Backupper
 
-__version__ = "1.10"
+try:
+    import gui
+except ImportError:
+    print("Warning: Cannot import GUI module. GUI will be inaccessible.")
+
+__version__ = "1.10.1"
 
 
 def main(action: str, game_name: str = None, dry: bool = False):
