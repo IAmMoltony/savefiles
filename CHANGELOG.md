@@ -2,6 +2,14 @@
 
 Changelog for savefiles backup tools.
 
+## 1.10.1
+
+- Fixed crashing if GUI cannot be imported
+
+## 1.10
+
+- Added support for *Terraria*
+
 ## 1.9
 
 - Added support for *Animal Crossing* using the *Dolphin* emulator
