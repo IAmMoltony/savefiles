@@ -29,6 +29,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/misc/magenta_dye_from_lilac": {
+    "criteria": {
+      "has_double_plant": "2024-07-30 16:40:50 +0600"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/oak_wooden_slab": {
     "criteria": {
       "has_planks": "2024-07-26 14:03:10 +0600"
@@ -56,6 +62,12 @@
   "minecraft:recipes/tools/iron_pickaxe": {
     "criteria": {
       "has_iron_ingot": "2024-07-26 14:28:09 +0600"
+    },
+    "done": true
+  },
+  "minecraft:nether/root": {
+    "criteria": {
+      "entered_nether": "2024-07-30 17:01:26 +0600"
     },
     "done": true
   },
@@ -230,6 +242,12 @@
   "minecraft:recipes/building_blocks/gray_wool": {
     "criteria": {
       "has_white_wool": "2024-07-26 14:09:37 +0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/cake": {
+    "criteria": {
+      "has_egg": "2024-07-30 16:40:06 +0600"
     },
     "done": true
   },
@@ -561,6 +579,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/misc/bowl": {
+    "criteria": {
+      "has_brown_mushroom": "2024-07-30 16:21:22 +0600"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/gray_bed_from_white_bed": {
     "criteria": {
       "has_bed": "2024-07-26 14:10:58 +0600"
@@ -609,11 +633,18 @@
     },
     "done": true
   },
+  "minecraft:recipes/combat/spectral_arrow": {
+    "criteria": {
+      "has_glowstone_dust": "2024-07-30 16:25:25 +0600"
+    },
+    "done": true
+  },
   "minecraft:adventure/kill_all_mobs": {
     "criteria": {
       "skeleton": "2024-07-26 14:35:47 +0600",
       "zombie": "2024-07-26 14:24:11 +0600",
       "silverfish": "2024-07-29 15:25:07 +0600",
+      "witch": "2024-07-30 16:25:18 +0600",
       "spider": "2024-07-26 14:24:17 +0600",
       "creeper": "2024-07-26 14:34:54 +0600",
       "enderman": "2024-07-28 20:16:01 +0600"
@@ -623,6 +654,12 @@
   "minecraft:recipes/tools/diamond_shovel": {
     "criteria": {
       "has_diamond": "2024-07-28 20:14:11 +0600"
+    },
+    "done": true
+  },
+  "minecraft:story/enter_the_nether": {
+    "criteria": {
+      "entered_nether": "2024-07-30 17:01:26 +0600"
     },
     "done": true
   },
@@ -671,6 +708,12 @@
   "minecraft:recipes/combat/diamond_helmet": {
     "criteria": {
       "has_diamond": "2024-07-28 20:14:11 +0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/anvil": {
+    "criteria": {
+      "has_the_recipe": "2024-07-30 17:08:16 +0600"
     },
     "done": true
   },
@@ -896,6 +939,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/glowstone": {
+    "criteria": {
+      "has_glowstone_dust": "2024-07-30 16:25:25 +0600"
+    },
+    "done": true
+  },
   "minecraft:recipes/combat/golden_helmet": {
     "criteria": {
       "has_gold_ingot": "2024-07-26 15:18:44 +0600"
@@ -1038,10 +1087,12 @@
     "criteria": {
       "forest": "2024-07-26 14:21:59 +0600",
       "birch_forest": "2024-07-29 16:27:07 +0600",
+      "deep_ocean": "2024-07-30 16:49:07 +0600",
       "beaches": "2024-07-29 15:39:37 +0600",
       "extreme_hills_with_trees": "2024-07-26 14:43:24 +0600",
       "forest_hills": "2024-07-29 16:27:30 +0600",
       "plains": "2024-07-26 14:02:39 +0600",
+      "birch_forest_hills": "2024-07-30 17:37:29 +0600",
       "ocean": "2024-07-29 15:27:54 +0600",
       "extreme_hills": "2024-07-26 14:05:06 +0600",
       "roofed_forest": "2024-07-29 15:40:38 +0600",
@@ -1071,6 +1122,12 @@
   "minecraft:recipes/decorations/cobblestone_wall": {
     "criteria": {
       "has_cobblestone": "2024-07-26 14:05:11 +0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/brewing/fermented_spider_eye": {
+    "criteria": {
+      "has_spider_eye": "2024-07-30 16:25:23 +0600"
     },
     "done": true
   },
@@ -1113,6 +1170,12 @@
   "minecraft:recipes/redstone/heavy_weighted_pressure_plate": {
     "criteria": {
       "has_iron_ingot": "2024-07-26 14:28:09 +0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/diamond_block": {
+    "criteria": {
+      "has_at_least_9_diamond": "2024-07-30 17:08:03 +0600"
     },
     "done": true
   },
@@ -1161,6 +1224,12 @@
   "minecraft:recipes/building_blocks/stone_stairs": {
     "criteria": {
       "has_cobblestone": "2024-07-26 14:05:11 +0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/diamond": {
+    "criteria": {
+      "has_the_recipe": "2024-07-30 17:08:03 +0600"
     },
     "done": true
   },
