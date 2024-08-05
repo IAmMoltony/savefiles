@@ -265,6 +265,7 @@
   },
   "minecraft:husbandry/balanced_diet": {
     "criteria": {
+      "cooked_porkchop": "2024-08-05 16:42:13 +0600",
       "cooked_mutton": "2024-07-29 16:21:01 +0600",
       "cooked_beef": "2024-07-26 14:24:51 +0600"
     },
@@ -641,6 +642,7 @@
   },
   "minecraft:adventure/kill_all_mobs": {
     "criteria": {
+      "zombie_villager": "2024-08-05 16:37:27 +0600",
       "skeleton": "2024-07-26 14:35:47 +0600",
       "zombie": "2024-07-26 14:24:11 +0600",
       "silverfish": "2024-07-29 15:25:07 +0600",
